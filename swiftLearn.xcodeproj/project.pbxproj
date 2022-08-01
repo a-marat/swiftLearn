@@ -1,0 +1,74 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXFileReference section */
+		79C7831F28986B86008161AF /* Basics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Basics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		79C7831828986B5A008161AF = {
+			isa = PBXGroup;
+			children = (
+				79C7831F28986B86008161AF /* Basics.playground */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		79C7831928986B5A008161AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+			};
+			buildConfigurationList = 79C7831C28986B5A008161AF /* Build configuration list for PBXProject "swiftLearn" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79C7831828986B5A008161AF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		79C7831D28986B5A008161AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		79C7831E28986B5A008161AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79C7831C28986B5A008161AF /* Build configuration list for PBXProject "swiftLearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79C7831D28986B5A008161AF /* Debug */,
+				79C7831E28986B5A008161AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79C7831928986B5A008161AF /* Project object */;
+}
