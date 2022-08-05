@@ -38,3 +38,22 @@ if (orangeGorilla) {
     ("Я люблю гориллу со вкусом Mango")
 }
 // Выведет "Я люблю гориллу со вкусом Orange"
+
+
+/* Кортежи */
+
+let http404Error = (404, "Not Found") // Объявление кортежа со значениями Int и String
+print(http404Error) // Выведет (404, Not Found)
+
+let (statusCode, statusMessage) = http404Error // Разложение кортежа на отдельные константы
+print("The status code is \(statusCode)") // Выведет "The status code is 404"
+print("The status message is \(statusMessage)") // Выведет "The status message is Not Found"
+
+let (justStatusCode, _) = http404Error // Получение только одного значения кортежа
+print("Just the status code is \(justStatusCode)") // Выведет "Just the status code is 404"
+
+let simpleCotezh = ("pineapple", "orange", "mango") // Объявление нового кортежа
+print(simpleCotezh.0) // Получения доступа к кортежу по числовому индексу
+
+let macbookType = (name: "Macbook", year: 2021) // Объявление кортежа с присвоением имен каждому элементу
+print(macbookType.name, macbookType.year) // Выведет "Macbook 2021"
