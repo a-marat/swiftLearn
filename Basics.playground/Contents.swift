@@ -96,3 +96,66 @@ var pi = 3.14
 var valuePi = true
 var examPi = valuePi ? "Верно" : "Не верно" // Выведет "Верно", так как valuePi истина
 
+// Оператор замкнутого типа a...b, где значение a всегда должно быть значения b
+
+for index in 1...7 {
+    print("\(index) умножить на 2 будет \(index * 2)")
+}
+
+// Оператор полузамкнутого значения типа a..<b. Полузамкнутый, потому что он включает первое значение, но исключает последнее.
+
+let names = ["Marat", "Mukhtar", "Arslan", "Arkadiy"]
+let count = names.count
+
+for i in 0..<count {
+    print("Имя \(i + 1) будет \(names[i])")
+}
+
+// Оператор одностороннего диапазона.
+
+for name in names[2...] {
+    print(name)
+}
+
+for name in names[...2] {
+    print(name)
+}
+
+// Логические оператор НЕ !
+
+let peremN = false
+if !peremN {
+    print("Если peremN является истиной, то выведется этот текст")
+}
+
+// Логический оператор И &&
+
+let enterCode = true
+let enterPin = false
+
+if enterCode && enterPin {
+    print("Доступ разрешен!")
+} else {
+    print("Доступ Не разрешен!")
+}
+
+// Оператор ИЛИ ||
+
+let enterPinCode = true
+let enterFaceId = false
+
+if enterPinCode || enterFaceId {
+    print("Доступ разрещен!")
+} else {
+    print("Доступ НЕ разрещен!")
+}
+
+// Комбинирование логических операторов со скобкой
+
+let faceID = true
+let pinCode = false
+let recoveryPassword = true
+
+if (faceID && pinCode) || recoveryPassword {
+    print("Доступ разрещен!")
+} else {"Доступ не разрещен!"}
