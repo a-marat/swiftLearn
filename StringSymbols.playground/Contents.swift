@@ -26,3 +26,45 @@ let multiLineSpace = """
 """
 
 
+/* Специальные символы в строковых литералах */
+
+/*
+ 
+\0 - Нулевой символ
+\\ - Обратный слэш
+\r - Возвращение каретки
+\t - Табуляция
+\n - Перенос на новую строку
+\" - Двойные кавычки
+\' - Одиночные кавычки
+
+\u{n} - Скалярные величины юникода, где n произвольное шестнадцатеричное число.
+ 
+*/
+
+let lojaMotto2 = " \"Без боли - нет результата!\" - слоган Ложи" //  "Без боли - нет результата!" - слоган Ложи
+let dollarSign = "\u{24}" // "$"
+
+
+/* Инициализация пустых строк */
+
+let emptyString = ""
+let emptyStringV2 = String()
+
+
+/* Изменчивость строк */
+
+var varString = "Ajara" // было "Ajara"
+varString += " go Loja" // стало "Ajara go Loja "
+
+/*
+let constantString = "Ajara" // было "Ajara"
+constantString += " go Loja" // Выдаст ошибку "change 'let' to 'var' to make it mutable"
+*/
+
+/* Работа с символами */
+
+for character in "Car" {
+    print(character)
+}
+
