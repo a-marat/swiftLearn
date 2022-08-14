@@ -62,9 +62,103 @@ let constantString = "Ajara" // было "Ajara"
 constantString += " go Loja" // Выдаст ошибку "change 'let' to 'var' to make it mutable"
 */
 
+
 /* Работа с символами */
 
 for character in "Car" {
-    print(character)
+    print(character) // Выведет C a r в вертикальном виде
 }
+
+
+/* Конкатенация строк */
+
+let string1 = "Hello"
+let string2 = " World"
+
+var helloWorld = string1 + string2
+print(helloWorld) // Выведет Hello World
+
+
+/* Интерполяция строк */
+
+let multiplier = 3
+let message = "\(multiplier) умноженное на 2.5 будет \(Double(multiplier) * 2.5)"
+
+
+/* Подсчет символов */
+
+let salam = "Ассаламу алейкум"
+print("Переменная salam содержит \(salam.count) символов")
+
+
+/* Индексы строки */
+
+salam[salam.startIndex] // А
+salam[salam.index(before: salam.endIndex)] // м
+salam[salam.index(after: salam.startIndex)] // с
+
+let indexSalam = salam.index(salam.startIndex, offsetBy: 6)
+salam[indexSalam] // м
+
+
+/* Добавдение и удаление */
+
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex) // hello!
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex)) // hello there!
+
+welcome.remove(at: welcome.index(before: welcome.endIndex)) // hello there
+print(welcome)
+
+
+/* Сравнение строк */
+
+let string3 = "Какой-то текст"
+let string4 = "Какой-то текст"
+
+if string3 == string4 {
+    print("Строки считаются равными")
+} else {
+    print("Строки не равные")
+}
+
+
+/* Равенство префиксов и суффиксов */
+
+let romeoAndJuliet = [
+    "Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell"
+]
+
+var act1SceneCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Act 1 ") {
+        act1SceneCount += 1
+    }
+}
+
+print("Всего \(act1SceneCount) сцен в акте 1") // Всего 5 сцен в акте 1
+
+
+var mansionCount = 0
+var cellCount = 0
+
+for scene in romeoAndJuliet {
+    if scene.hasSuffix("Capulet's mansion") {
+        mansionCount += 1
+    } else if scene.hasSuffix("Friar Lawrence's cell") {
+        cellCount += 1
+    }
+}
+
+print("\(mansionCount) сцен в особняке; \(cellCount) тюремные сцены") // 6 сцен в особняке; 2 тюремные сцены
 
