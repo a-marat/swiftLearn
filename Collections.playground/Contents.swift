@@ -73,3 +73,46 @@ for item in carDetail {
 for (index, value) in carDetail.enumerated() {
     print("Элемент номер \(index + 1) : \(value)")
 }
+
+
+/* Множества */
+
+var letters = Set<String>() // Инициализация пустого множества типа String
+
+var listingSports: Set = ["Футбол", "Баскетбол", "Волейбол", "Хоккей"] // Обяъвление и инициализация множества
+
+listingSports.count // Подсчет количества элементов множества с помощью свойства count
+
+listingSports.isEmpty // Проверка на наличие элементов с помощью свойства isEmpty
+
+listingSports.insert("Борьба") // Добавление нового элемента
+
+listingSports.contains("Футбол") // Проверка на наличие определенного элемента
+
+for sport in listingSports { // Итерация по множеству
+    print(sport)
+}
+
+for sports in listingSports.sorted() { // Итерация с сортировкой по алфавиту
+    print(sports)
+}
+
+
+/* Операции со множествами */
+
+let oddNumbers: Set = [1, 3, 5, 7, 9]
+
+let evenNumbers: Set = [0, 2, 4, 6, 8]
+
+let primeNumbers: Set = [2, 3, 5, 7]
+
+oddNumbers.union(evenNumbers).sorted() // Создание нового множества состоящего из всех значений двух множеств
+
+oddNumbers.intersection(evenNumbers).sorted() // Создание нового множества состоящего из общих значений двух множеств
+
+oddNumbers.subtracting(primeNumbers).sorted() // Создание нового множества со значениями не принадлежащих двум входным множествам
+
+oddNumbers.symmetricDifference(primeNumbers).sorted() // Создание нового множества из значений, которые не повторяются в двух входных множествах
+
+
+
