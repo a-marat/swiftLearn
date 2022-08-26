@@ -1,0 +1,49 @@
+import UIKit
+
+// Замыкания (клоужеры) повтор
+
+/*
+ Синтаксис
+ 
+ { (параметры) -> тип результата in
+    тело клоужера (выражения)
+ }
+ 
+ */
+
+// Клоужер без параметров
+
+let driving = {
+    print("I'm driving in my car")
+}
+ 
+driving() // Выведет I'm driving in my car
+
+
+// Клоужер с параметром
+let driving2 = { (place: String) in
+    print("I'm going to \(place) in my car")
+}
+
+driving2("London") // Выведет I'm going to London in my car
+
+
+// Разница между функциями и клоужерами
+
+func pay(user: String, amount: Int) {
+    // code
+}
+
+let payment = { (user: String, amount: Int) in
+    
+}
+
+
+// Клоужер с возвращаемыми значениями
+
+let drivingWithReturn = { (place: String) -> String in
+    return "I'm going to \(place) in my car"
+}
+
+let message = drivingWithReturn("London")
+print(message) // Выведет I'm going to London in my car
